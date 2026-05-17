@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, white, black);
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container{
+            background-color: rgba(0,0,0,0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            border-radius: 15px;
+            color: white;
+            width: 320px;
+        }
+
+        h1, h5{
+            text-align: center;
+        }
+
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        button{
+            background-color: rgb(184, 184, 184);
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 20px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover{
+            background-color: rgb(230, 230, 230);
+        }
+
+        #weather-data{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #temperature{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        #description-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #details-container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        img{
+            width: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Clima da região</h1>
+        <h5>Confira o clima de qualquer região</h5>
+
+        <div class="form-input-container">
+
+            <input 
+                type="text" 
+                id="city-input"
+                placeholder="Digite uma cidade"
+            >
+
+            <button id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div id="weather-data">
+
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span id="city">Maceió</span>
+
+                <img
+                    src="https://flagsapi.com/BR/flat/64.png"
+                    alt="Bandeira"
+                    id="country"
+                >
+            </h2>
+
+            <p id="temperature">
+                <span>38</span>&deg;C
+            </p>
+
+            <div id="description-container">
+
+                <p id="description">Nublado</p>
+
+                <img
+                    src="https://openweathermap.org/img/wn/01d.png"
+                    alt="Clima"
+                    id="weather-icon"
+                >
+
+            </div>
+
+            <div id="details-container">
+
+                <p id="humidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>48%</span>
+                </p>
+
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>3 km/h</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
